@@ -2,16 +2,16 @@
     margin: 0;
     padding: 0;
 }
-.root {
-   --cor-fundo: rgb(128, 38, 38);
+:root {
+   --cor-fundo:rgb(31, 102, 41);
    --cor-fonte: rgb(20, 20, 20);
-   --cor-houver:rgb(71, 112, 165);
+   --cor-hover: rgb(71, 112, 165);
 }
 a {
-   text-decoration-color: rgb(145, 98, 138); 
+ text-decoration-color: rgb(145, 98, 138);
 }
 ul{
- list-style: none;
+    list-style: none;
 }
 .header {
     background-color: var(--cor-fundo);
@@ -22,7 +22,12 @@ ul{
 .logo {
     display: inline-block;
 }
-.nav{ 
+#logo{
+    height: 16vh;
+    width: 10vw;
+}
+
+.nav{
     width: 100vw;
     height: 100vw;
     position: fixed;
@@ -34,12 +39,12 @@ ul{
     padding: 30px;
     color: var(--cor-fonte);
 }
-.menu a:hover {
-    background-color: var(--cor-houver);
-} 
+.menu a:hover{
+    background-color: var(--cor-hover);
+}
 .nav {
     max-height: 0;
-    transition: max-height    .5s ease-out;
+    transition: max-height   .5s ease-out; 
 }
 .hamb {
     cursor: pointer;
@@ -53,41 +58,58 @@ ul{
     position: relative;
     width: 24px;
 }
-.hamb-line::before,
-.hamb-line::after{
+.hamb-ling::before,
+.hamb-ling::after{
     background-color: var(--cor-fonte);
-    content: '';;
+    content: '';
     display: block;
     height: 100%;
     position: absolute;
-    transform: all   .2s ease-out;
+    transform: all  .2s ease-out;
     width: 100%;
 }
 .hamb-line::before{
     top:5px;
 }
-.hamb-line::before{
+.hamb-line::after{
     top:-5px;
 }
 .side-menu{
     display: none;
 }
+.side-menu:checked ~ nav{
+    max-height: 100%;
+}
+.side-menu:checked ~ .hamb.hamb-line{
+    background: transparent;
+}
+.side-menu:checked ~.hamb .hamb-line::before {
+transform: rotate(-45deg);
+top:0;
+}
+.side-menu:checked ~.hamb .hamb-line::after {
+    transform: rotate(45deg);
+    top:0;
+    }
+
 .rodape{
     width: 100%;
     text-align: center;
 }
-
 @media screen and (min-width: 768px){
-    .menu {
-        height: 100px;
-        background-color: palevioletred;
-    }
+   .menu{
+    height: 100px;
+    background-color: rgb(23, 114, 94);
+    text-align: center;
+    font-size: 35px;
+   }
 }
-@media screen and (min-width:1280px) {
- .menu{
-    height:100px;
-    background-color: rgb (0,0, 0);
-    color: white;
-    font-size: 64px;
- } 
-} 
+@media screen and (min-width: 1280px){
+    .menu{
+        height: 100px;
+        background-color: rgb(22, 33, 95);
+        color: #fff;
+        font-size: 64px;
+        text-align: center;
+       }
+}
