@@ -58,8 +58,8 @@ ul{
     position: relative;
     width: 24px;
 }
-.hamb-ling::before,
-.hamb-ling::after{
+.hamb-line::before,
+.hamb-line::after{
     background-color: var(--cor-fonte);
     content: '';
     display: block;
