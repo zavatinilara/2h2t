@@ -93,23 +93,27 @@ top:0;
     }
 
 .rodape{
-    width: 100%;
     text-align: center;
 }
-@media screen and (min-width: 768px){
-   .menu{
-    height: 100px;
-    background-color: rgb(23, 114, 94);
-    text-align: center;
-    font-size: 35px;
-   }
+@media screen and (min-width: 820px){
+  .nav {
+    max-height: none;
+    top: 0;
+    position: relative;
+    float: right;
+    width: fit-content;
+    background-color: transparent;
+  }
+  .menu li {
+    float: left;
+  }
+  .menu a:hover {
+    background-color: transparent;
+  }
+  .hamb {
+    display: none;
+  }
 }
-@media screen and (min-width: 1280px){
-    .menu{
-        height: 100px;
-        background-color: rgb(22, 33, 95);
-        color: #fff;
-        font-size: 64px;
-        text-align: center;
-       }
+@media screen and (min-width: 1028px){  
+
 }
